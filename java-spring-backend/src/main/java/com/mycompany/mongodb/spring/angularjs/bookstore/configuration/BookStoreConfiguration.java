@@ -12,7 +12,7 @@ import org.springframework.data.mongodb.config.AbstractMongoConfiguration;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
 @Configuration
-@EnableMongoRepositories
+@EnableMongoRepositories(basePackages = "com.mycompany.mongodb.spring.angularjs.bookstore.repository")
 public class BookStoreConfiguration extends AbstractMongoConfiguration {
 
     private static final String MONGODB_CONNECTION_URL = "127.0.0.1"; // localhost
