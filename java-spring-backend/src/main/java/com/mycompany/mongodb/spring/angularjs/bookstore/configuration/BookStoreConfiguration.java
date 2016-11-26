@@ -28,4 +28,9 @@ public class BookStoreConfiguration extends AbstractMongoConfiguration {
         return new MongoClient(MONGODB_CONNECTION_URL, MONGODB_DEFAULT_CONNECTION_PORT);
     }
 
+    @Override
+    protected String getMappingBasePackage() {
+        return "com.mycompany.mongodb.spring.angularjs.bookstore.model";
+    }
+
 }
