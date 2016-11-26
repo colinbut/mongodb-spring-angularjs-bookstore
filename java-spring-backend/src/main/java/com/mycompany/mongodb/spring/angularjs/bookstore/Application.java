@@ -1,12 +1,21 @@
 package com.mycompany.mongodb.spring.angularjs.bookstore;
 
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
 /**
  * Application
  */
-public class Application{
+@SpringBootApplication
+public class Application implements CommandLineRunner {
 
     public static void main( String[] args ) {
-        System.out.println("Application");
+        SpringApplication.run(Application.class, args);
     }
 
+    @Override
+    public void run(String... strings) throws Exception {
+        // nothing
+    }
 }
