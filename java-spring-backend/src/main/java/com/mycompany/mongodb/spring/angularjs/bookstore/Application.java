@@ -5,13 +5,10 @@ import com.mycompany.mongodb.spring.angularjs.bookstore.repository.BookRepositor
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
 
 /**
- * Application
+ * BookStore application
  */
 @SpringBootApplication
 public class Application implements CommandLineRunner {
