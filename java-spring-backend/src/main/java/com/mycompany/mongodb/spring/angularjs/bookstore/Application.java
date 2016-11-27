@@ -1,5 +1,6 @@
 package com.mycompany.mongodb.spring.angularjs.bookstore;
 
+import com.mycompany.mongodb.spring.angularjs.bookstore.dao.BookDao;
 import com.mycompany.mongodb.spring.angularjs.bookstore.model.Book;
 import com.mycompany.mongodb.spring.angularjs.bookstore.repository.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +16,9 @@ public class Application implements CommandLineRunner {
 
     @Autowired
     private BookRepository bookRepository;
+
+    @Autowired
+    private BookDao bookDao;
 
     public static void main( String[] args ) {
         SpringApplication.run(Application.class, args);
