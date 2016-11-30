@@ -24,8 +24,6 @@ public class BookDaoImpl implements BookDao {
     @Autowired
     private MongoOperations mongoOperations;
 
-
-
     @Override
     public void insert(Book book) {
         mongoOperations.insert(book, BOOK_COLLECTION);

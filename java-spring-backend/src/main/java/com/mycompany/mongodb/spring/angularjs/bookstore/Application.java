@@ -43,7 +43,7 @@ public class Application implements CommandLineRunner {
         }
 
         for (Book book : bookRepository.findAll()) {
-            System.out.println(book);
+            LOGGER.debug("{}", book);
         }
 
 
