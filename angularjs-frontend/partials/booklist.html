@@ -1,0 +1,16 @@
+<div id="container" class="container">
+  <div>
+    <h1>Books:</h1>
+  </div>
+  <div>
+    <div ng-repeat="book in bookList">
+      {{book}}
+    </div>
+  </div>
+  <div>
+    <form ng-submit="submit()">
+      <input type="text" placeholder="new book"/>
+      <button type="submit">Add</button>
+    </form>
+  </div>
+</div>
