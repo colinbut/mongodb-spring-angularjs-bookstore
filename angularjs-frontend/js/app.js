@@ -1,4 +1,4 @@
-var app = angular.module("bookStoreApp", ['ngRoute', 'bookListControllers']);
+var app = angular.module("bookStoreApp", ['ngRoute', 'bookStoreControllers']);
 
 app.config(['$routeProvider', '$locationProvider',
   function($routeProvider, $locationProvider) {

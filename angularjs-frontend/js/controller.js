@@ -1,8 +1,8 @@
 'use strict';
 
-var bookListController = angular.module("bookListControllers", []);
+var bookListController = angular.module("bookStoreControllers", []);
 
-bookListController.controller('bookListController', ['$scope', 'BookList',
+bookStoreControllers.controller('bookListController', ['$scope', 'BookList',
   function($scope) {
 
     $scope.bookList = [];
