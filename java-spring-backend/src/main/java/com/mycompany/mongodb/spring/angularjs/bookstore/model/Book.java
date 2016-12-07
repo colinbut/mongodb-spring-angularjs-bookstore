@@ -9,6 +9,8 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
+import java.util.Objects;
+
 @Document(collection = "books")
 public class Book {
 
@@ -67,6 +69,27 @@ public class Book {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Book book = (Book) o;
+        return price == book.price &&
+            Objects.equals(id, book.id) &&
+            Objects.equals(title, book.title) &&
+            Objects.equals(author, book.author) &&
+            Objects.equals(type, book.type);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, title, author, price, type);
     }
 
     @Override
